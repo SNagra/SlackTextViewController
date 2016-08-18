@@ -118,14 +118,19 @@
     }
     
     NSString *text = @"";
+    
+    if (self.indicatorText != nil ) {
+        text = self.indicatorText;
+    }
+    
     NSString *firstObject = [self.usernames firstObject];
     NSString *lastObject = [self.usernames lastObject];
     
     if (self.usernames.count == 1) {
-        text = [NSString stringWithFormat:NSLocalizedString(@"%@", nil), firstObject];
+        text = [NSString stringWithFormat:NSLocalizedString(@"%@ %@", nil), firstObject, text];
     }
     else if (self.usernames.count == 2) {
-        text = [NSString stringWithFormat:NSLocalizedString(@"%@", nil), lastObject];
+        text = [NSString stringWithFormat:NSLocalizedString(@"%@ %@", nil), lastObject, text];
     }
     
     NSMutableParagraphStyle *style  = [[NSMutableParagraphStyle alloc] init];

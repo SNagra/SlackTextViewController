@@ -26,6 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** The font of the text. Default is system font, 12 pts. */
 @property (nonatomic, strong) UIFont *textFont;
 
+/** The text for the indicator label. */
+@property (nonatomic, strong) NSString *indicatorText;
+
 /** The font to be used when matching a username string. Default is system bold font, 12 pts. */
 @property (nonatomic, strong) UIFont *highlightFont;
 
